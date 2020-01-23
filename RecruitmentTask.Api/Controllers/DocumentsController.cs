@@ -61,7 +61,7 @@ namespace RecruitmentTask.Api.Controllers
             await documentProcessor.AddDocumentAsync(doc);
 
             return CreatedAtAction(nameof(Get),
-                new { author = doc.Author, from = doc.AdditionDate.ToString("d", CultureInfo.InvariantCulture) });
+                new { author = doc.Author, additionDate = doc.AdditionDate.ToString(CultureInfo.InvariantCulture) });
         }
     }
 }
